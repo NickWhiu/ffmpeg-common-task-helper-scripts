@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ffmpeg-bar -y -i $1 -qscale 1 -q 1 -s 1280x720 -b 2048k -ac 1 -ar 16000 -ab 32000 "$1.hq.avi"

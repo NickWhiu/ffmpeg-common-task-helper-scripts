@@ -1,0 +1,3 @@
+#!/bin/bash
+for f in *.flac; do ffmpeg-bar -i "$f" -acodec libvorbis "$f.ogg"; done
+for f in *.m4a; do ffmpeg-bar -i "$f" -acodec libvorbis "$f.ogg"; done

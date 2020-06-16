@@ -1,0 +1,3 @@
+#!/bin/bash
+ffmpeg-bar -i "$1" -s 640x360 -vcodec mpeg4 -b 700k -ac 1 -ar 16000 -r 13 -ab 32000 "$1.lowres.avi"
+

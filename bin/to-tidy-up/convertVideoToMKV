@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#-b 2000k
+opt="-c:v libvpx -b:v 500 -c:a libvorbis -aq 1 -threads 2 -aspect 16:9 -s 640x360 -bf 2"
+ffmpeg-bar -i "$1" $opt "$1.mkv"

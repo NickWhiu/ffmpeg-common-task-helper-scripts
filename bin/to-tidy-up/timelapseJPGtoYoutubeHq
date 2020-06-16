@@ -1,0 +1,11 @@
+#!/bin/bash
+#renameAll JPG jpg
+#renumberJpgs
+
+files="%06d.jpg"
+cv="-c:v h264"
+opt="-threads 2 -qscale 1 -q 1 -b 5120k -aspect 16:9 -s 1280x720 -bf 2"
+
+ffmpeg-bar -y -i $files $cv -an $opt "hq.avi"
+
+

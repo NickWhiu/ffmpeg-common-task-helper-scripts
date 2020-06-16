@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cv="-c:v h264"
+opt="-threads 2 -aspect 16:9 -s 1280x720 -bf 2" # -ac 1 -ar 16000 -ab 32000"
+ffmpeg-bar-bar -i $1 $cv $opt "$1.youtube.avi"

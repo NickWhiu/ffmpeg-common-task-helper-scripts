@@ -1,0 +1,7 @@
+#!/bin/bash
+#ffmpeg-bar -i $1 -s 640x360 -vcodec mpeg4 -b 700k -ac 1 -ar 16000 -r 13 -ab 32000 "$1.lowres.avi"
+
+options="-qscale 1 -q 1 -s 900x600 -b 2048k -ac 1 -ar 16000 -r 13 -ab 32000"
+ffmpeg-bar -y -i $1 -an -pass 1 -threads 2 $options "hq.avi"
+ffmpeg-bar -y -i $1 -pass 2 -threads 2 $options "hq.avi"
+

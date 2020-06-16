@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#-b 2000k
+opt="-c:v h264 -threads 2 -aspect 16:9 -s 640x360 -bf 2"
+ffmpeg-bar -i "$1" $opt "$1.med-qual.avi"
