@@ -4,8 +4,8 @@
 1. Clone this repo
 2. Add the bin folder to your $PATH
 3. Install ffmpeg & ffmpeg-bar:
-    - MacOS: Run `brew install ffmpeg && npm install --global ffmpeg-progressbar-cli` command in terminal
-    - Ubuntu/Debian Linux: Run `sudo apt install ffmpeg && npm install --global ffmpeg-progressbar-cli` command in terminal
+    - MacOS: Run `brew install ffmpeg && sudo npm install --global ffmpeg-progressbar-cli` command in terminal
+    - Ubuntu/Debian Linux: Run `sudo apt install ffmpeg && sudo npm install --global ffmpeg-progressbar-cli` command in terminal
 
 ## Usage
 Add the bin folder to your $PATH, or call the bin by explicit full path.
