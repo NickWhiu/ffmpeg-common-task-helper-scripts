@@ -2,7 +2,7 @@
 
 ## Installation
 1. Clone this repo
-2. Add the `bin` folder and `bin/timelapse` to your $PATH
+2. Add the `bin` folder and `bin/timelapse` to your `$PATH`
 3. Install ffmpeg & ffmpeg-bar:
     - MacOS: Run `brew install ffmpeg && npm install --global ffmpeg-progressbar-cli` command in terminal
     - Ubuntu/Debian Linux: Run `sudo apt install ffmpeg && npm install --global ffmpeg-progressbar-cli` command in terminal
