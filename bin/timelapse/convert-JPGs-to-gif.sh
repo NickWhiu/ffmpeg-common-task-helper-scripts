@@ -21,5 +21,5 @@ if [ -z $fps ]; then
     usageHelp
 fi
 
-ffmpeg -f image2 -y -i $files $opts -framerate $fps "timelapse.gif"
+ffmpeg-bar -f image2 -y -i $files $opts -framerate $fps "timelapse.gif"
 
