@@ -1,4 +1,4 @@
-# FFMPEG helper scripts
+# FFMPEG common task helper scripts
 
 ## Installation
 1. Clone this repo
