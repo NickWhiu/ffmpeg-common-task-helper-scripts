@@ -10,4 +10,4 @@
 ## Usage
 Add the bin folder to your $PATH, or call the bin by explicit full path.
 The scripts are named with friendly names.
-They dont have friendly usage help yet, so go through source for now.
+Some have friendly usage help, other scripts still need this to be added; check the source for now.
