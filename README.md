@@ -11,3 +11,8 @@
 Add the bin folder to your $PATH, or call the bin by explicit full path.
 The scripts are named with friendly names.
 They dont have friendly usage help yet, so go through source for now.
+
+
+## Contributing
+
+See docs at https://ffmpeg.org/ffmpeg-filters.html and use your web-search skills to come up with more hepful scripts, or to maintain and improve existing scripts.
