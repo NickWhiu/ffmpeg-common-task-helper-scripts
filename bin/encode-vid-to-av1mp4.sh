@@ -6,7 +6,7 @@ OUTPUT="${INPUT%.*}.b${BITRATE}.av1.mp4"
 BITRATE=${2-500}
 
 # convert to raw y4m (Large, GB's!). Fast.
-ffmpeg-bar -i "$INPUT" -pix_fmt yuv420p "${INPUT}.y4m"
+ffmpeg-bar -i "$INPUT" -s 640x360 -pix_fmt yuv420p "${INPUT}.y4m"
 
 # encode to av1 inside ivf container. Slow.
 rav1e -b $BITRATE "${INPUT}.y4m" -o "${INPUT}.ivf"
