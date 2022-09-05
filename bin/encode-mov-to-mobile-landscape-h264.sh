@@ -9,7 +9,7 @@ extract-video-thumbnail-poster.sh "$INPUT"
 #-s 512x288
 # SIZE=384:216; SIZE=${2:-$SIZE};
 # SIZE=512:288; SIZE=${2:-$SIZE};
-SIZE=960:540; SIZE=${2:-$SIZE};
+SIZE=960:540; SIZE=${3:-$SIZE};
 VF=scale=$SIZE:force_original_aspect_ratio=decrease,pad=$SIZE:-1:-1:color=black
 BV=800k; BV=${2:-$BV};
 BA=16k
