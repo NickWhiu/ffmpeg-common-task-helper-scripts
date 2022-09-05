@@ -18,7 +18,7 @@ AUDIO=-acodec aac -ac 1 -ar 16000 -r 13 -ab "$BA"
 #-acodec aac -ac 1 -ar 16000 -r 13 -ab 32000
 
 ffmpeg-bar -i "$INPUT" -vf "$VF" -vcodec h264 -b:v "$BV" -profile:v baseline -tune film -preset veryslow -pass 1 -an -f null /dev/null -loglevel verbose && \
-ffmpeg-bar -i "$INPUT" -vf "$VF" -vcodec h264 -b:v "$BV" -profile:v baseline -tune film -preset veryslow -pass 2 $AUDIO "$INPUT.h264aac.mp4" -loglevel verbose
+ffmpeg-bar -i "$INPUT" -vf "$VF" -vcodec h264 -b:v "$BV" -profile:v baseline -tune film -preset veryslow -pass 2 -acodec aac -ac 2 -ar 32000 -ab "$BA" "$INPUT.h264aac.mp4" -loglevel verbose
 
 # remove 2pass cache
 rm -f ffmpeg2pass-0.log ffmpeg2pass-0.log.mbtree
