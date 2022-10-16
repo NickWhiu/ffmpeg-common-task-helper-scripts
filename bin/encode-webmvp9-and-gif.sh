@@ -21,9 +21,9 @@ AUDIO="-acodec aac"
 # -vf format=yuv420p
 
 # pass 1
-ffmpeg -i "$INPUT" -vf "$VF" -vcodec vp9 -b:v "$BV" -preset veryslow -pass 1 -pix_fmt yuva420p -auto-alt-ref 0 -an -f null /dev/null -loglevel verbose && \
+ffmpeg -i "$INPUT" -vf "$VF" -vcodec vp8 -b:v "$BV" -preset veryslow -pass 1 -pix_fmt yuva420p -auto-alt-ref 0 -an -f null /dev/null -loglevel verbose && \
 # pass 2
-ffmpeg -i "$INPUT" -vf "$VF" -vcodec vp9 -b:v "$BV" -preset veryslow -pass 2 -pix_fmt yuva420p -auto-alt-ref 0 -an "$INPUT.vp9.webm" -loglevel verbose
+ffmpeg -i "$INPUT" -vf "$VF" -vcodec vp8 -b:v "$BV" -preset veryslow -pass 2 -pix_fmt yuva420p -auto-alt-ref 0 -an "$INPUT.vp8.webm" -loglevel verbose
 ffmpeg -i "$INPUT" -lavfi split[v],palettegen,[v]paletteuse "$INPUT.gif" -loglevel verbose
 
 # make streamable

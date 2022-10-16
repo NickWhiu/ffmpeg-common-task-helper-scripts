@@ -18,9 +18,14 @@ BA=32k
 # AUDIO=copy
 #-acodec aac -ac 1 -ar 16000 -r 13 -ab 32000
 
+# pass 1
 ffmpeg-bar -i "$INPUT" -vf "$VF" -vcodec h264 -b:v "$BV" -profile:v baseline -tune film -preset veryslow -pass 1 -an -f null /dev/null -loglevel verbose && \
-ffmpeg-bar -i "$INPUT" -vf "$VF" -vcodec h264 -b:v "$BV" -profile:v baseline -tune film -preset veryslow -pass 2 -acodec aac -ac 1 -ar 32000 -ab "$BA" "$INPUT.h264aac.mp4" -loglevel verbose
+# pass 2
+ffmpeg-bar -i "$INPUT" -vf "$VF" -vcodec h264 -b:v "$BV" -profile:v baseline -tune film -preset veryslow -pass 2 -acodec aac -ac 1 -ar 32000 -ab "$BA" "$INPUT.h264aac_.mp4" -loglevel verbose
 
-# remove 2pass cache
+# make streamable
+MP4Box -add "$INPUT.h264aac_.mp4" -isma "$INPUT.h264aac.mp4"
+
+# cleanup
+rm -f "$INPUT.h264aac_.mp4"
 rm -f ffmpeg2pass-0.log ffmpeg2pass-0.log.mbtree
-
