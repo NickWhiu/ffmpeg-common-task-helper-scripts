@@ -1,0 +1,13 @@
+#!/bin/bash
+#renameAll JPG jpg
+#renumberJpgs
+
+files="%06d.jpg"
+fps=25; fps=${3:-$fps}
+
+cv="-c:v libx264 -preset slow -crf 18 -an -pix_fmt yuv420p"
+opt="-aspect 16:9 -s 1280x720"
+
+ffmpeg-bar -r $fps -f image2 -y -i $files $cv $opt -vf framerate=fps=25 "output_$fps.mkv"
+
+

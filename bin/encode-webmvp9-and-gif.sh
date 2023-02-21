@@ -4,7 +4,7 @@
 INPUT=$1
 
 # make thumbnail
-extract-video-thumbnail-poster.sh "$INPUT"
+#extract-video-thumbnail-poster.sh "$INPUT"
 
 #-s 512x288
 # SIZE=384:216; SIZE=${2:-$SIZE};

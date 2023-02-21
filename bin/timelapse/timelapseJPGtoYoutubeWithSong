@@ -1,0 +1,14 @@
+#!/bin/bash
+#renameAll JPG jpg
+#renumberJpgs
+
+files="%06d.jpg"
+cv="-c:v h264"
+res="1280x720"; res=${4:-$res}
+opt="-threads 2 -aspect 16:9 -s $res -bf 2" # -ac 1 -ar 16000 -ab 32000"
+
+fps=25; fps=${3:-$fps}
+
+ffmpeg-bar -y -r $fps -i $files -i $1 -t $2 $cv $opt "hq.avi"
+
+
